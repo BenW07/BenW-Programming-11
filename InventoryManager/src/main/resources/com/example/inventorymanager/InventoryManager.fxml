@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventorymanager.InventoryController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="769.0" prefWidth="1101.0" spacing="10.0">
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Item Management" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="Name:" />
+                                        <TextField fx:id="itemNameField" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="Quantity:" />
+                                        <TextField fx:id="itemQuantityField" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="Price:" />
+                                        <TextField fx:id="itemPriceField" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="Category:" />
+                                        <ComboBox fx:id="categoryComboBox" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Button fx:id="addItemButton" mnemonicParsing="false" onAction="#addItem" text="Add Item" />
+                                        <Button fx:id="removeItemButton" mnemonicParsing="false" onAction="#removeItem" text="Remove Item" />
+                                        <Button fx:id="updateItemButton" mnemonicParsing="false" onAction="#updateItem" text="Update Item" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Search" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <TextField fx:id="searchField" prefWidth="200.0" />
+                                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchItems" text="Search" />
+                                        <Button fx:id="clearSearchButton" mnemonicParsing="false" onAction="#clearSearch" text="Clear" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Button fx:id="showLowStockButton" mnemonicParsing="false" onAction="#showLowStock" text="Low Stock" />
+                                        <Button fx:id="showOutOfStockButton" mnemonicParsing="false" onAction="#showOutOfStock" text="Out of Stock" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Category Management" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="New Category:" />
+                                        <TextField fx:id="newCategoryField" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Label text="Description:" />
+                                        <TextField fx:id="categoryDescriptionField" prefWidth="150.0" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Button fx:id="addCategoryButton" mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
+                                        <Button fx:id="removeCategoryButton" mnemonicParsing="false" onAction="#removeCategory" text="Remove Category" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveData" text="Save Data" />
+                                        <Button fx:id="loadButton" mnemonicParsing="false" onAction="#loadData" text="Load Data" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <TableView fx:id="inventoryTable" prefHeight="200.0" prefWidth="772.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+                        <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="150.0" text="Category" />
+                        <TableColumn fx:id="totalValueColumn" prefWidth="150.0" text="Total Value" />
+                    </columns>
+                </TableView>
+                <ListView fx:id="categoriesListView" prefHeight="100.0" prefWidth="772.0" />
+                <HBox spacing="10.0">
+                    <children>
+                        <Label fx:id="totalItemsLabel" text="Total Items: 0" />
+                        <Label fx:id="totalValueLabel" text="Total Value: $0.00" />
+                        <Label fx:id="statusLabel" text="Status: Ready" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
