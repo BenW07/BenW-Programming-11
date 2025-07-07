@@ -1,0 +1,34 @@
+README EXAMPLE
+
+This Inventory Manager program is a JavaFX application meant to help you track products including their quantities and prices. To help organize these products, you use categories as a way to label them for easy grouping. This program was created in SceneBuilder and it has functionality for adding, removing, searching, and categorizing items, as well as being able to tell you if an item is low on stock or out of stock.
+
+To run this program you must have:
+Java JDK 11 or later
+JavaFX SDK
+And a general idea of how this program works
+
+To use this program you simply press the run button, this will automatically launch the application into a SceneBuilder interface. There are tabs for inventory viewing, category management, and searching.
+
+To add items you have to enter input into the following fields:
+Name
+Quantity
+Price
+Category
+
+To create categories you must enter a name and description then press Add Category. To Remove a category you select the category then press Remove Category. However, to properly remove a category it must be empty, meaning it must have no items.
+
+To search items, simply enter the term you'd like to search for into the search field. The results automatically update with partial matches. Clicking Clear Search will show all the items again.
+
+To search for low stock you must first select a threshold for the items to be considered low stock, then search for them. Clicking the show out of stock button will allow you to search for items with zero quantity.
+
+Data persistence works in this program by storing the inventory information to a file within the program folder once you press the Save button. Pressing the Load button will allow you to select the saved file located in the data directory to load the inventory information.
+
+Some additional notes I'd like to add are:
+The inventory.txt file contains all item data
+The categories.txt file contains all of the category definitions
+
+Enter numbers without currency symbols as that will create errors in the program
+
+Tests are included within the program
+
+Finally, I'd like to add that I really enjoyed this course and I am happy that I was able to use what I've learned to create a program that I consider to be pretty good and actually useful. I've been learning other coding languages because I've been learning more about video game development, but I really enjoy using Java to create programs and I think that the skills I've learned from this course will help me in other computer programming ventures.
